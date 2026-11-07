@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Activity, Banknote, CalendarDays, ChevronLeft, ChevronRight, CircleDollarSign, Clock3, LayoutDashboard, LogOut, Plus, Search, Settings, ShieldCheck, Users, Wallet, X } from 'lucide-react';
-import { isSupabaseConfigured } from './lib/supabase';
+import { isSupabaseConfigured, supabase } from './lib/supabase';
 type Booking={id:number;groupId?:number;date:string;court:number;customer:string;phone:string;start:number;end:number;status:'Lunas'|'DP'|'Belum Bayar';paid:number;total:number};
 const rupiah=(n:number)=>new Intl.NumberFormat('id-ID',{style:'currency',currency:'IDR',maximumFractionDigits:0}).format(n);
 const hours=Array.from({length:16},(_,i)=>i+7);
