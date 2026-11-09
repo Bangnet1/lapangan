@@ -129,3 +129,32 @@
 @media(prefers-reduced-motion:reduce){.stat-donut{animation:none}}
 
 .auth-subtitle{font-size:10px!important;letter-spacing:1.4px;font-weight:800;color:#0e9388!important;margin:0 0 8px!important}.auth-card .primary:disabled{opacity:.45;cursor:not-allowed}.auth-card input:disabled{background:#f3f6f6;color:#9aa8aa;cursor:not-allowed}
+
+
+/* Compact payment status label inside each booking block on the schedule. */
+.slot .slot-status{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  align-self:center;
+  width:max-content;
+  max-width:100%;
+  margin-top:3px;
+  padding:2px 5px;
+  border-radius:10px;
+  font-size:7px;
+  line-height:1.25;
+  font-weight:800;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  background:#ffffffb8;
+}
+.slot .slot-status.slot-paid{color:#14775d}
+.slot .slot-status.slot-dp{color:#946519}
+.slot .slot-status.slot-unpaid{color:#ae4e4a}
+.slot.booked{gap:2px}
+.slot.booked b{max-width:100%}
+@media(max-width:700px){
+  .slot .slot-status{font-size:6px;padding:2px 3px}
+}
