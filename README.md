@@ -34,4 +34,4 @@ Output directory: `dist`.
 Never expose the Supabase service-role key in the browser.
 
 ## Current scope
-The UI currently includes a working local/demo booking schedule and a database schema foundation. Production authentication, persistent CRUD wiring, pricing-rule application across multi-hour bookings, finance expense CRUD, and WhatsApp integration require configuration and subsequent integration/testing before live use.
+Booking schedules are stored in Supabase when an authenticated admin session is active. Each selected court can have its own duration; overlap validation is scoped to the same court and rejects only intersecting time ranges. Existing Supabase projects must apply the SQL files in `supabase/migrations/` before deploying the updated app. Expenses and some finance features remain local/demo data until their database integration is completed.
