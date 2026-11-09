@@ -191,3 +191,27 @@
 @media(max-width:700px){
   .slot .slot-status{font-size:7px;padding:2px 4px}
 }
+
+
+/* Financial dashboard: responsive seven-day income vs expense chart. */
+.finance-chart-panel{margin-bottom:18px}
+.finance-legend{display:flex;align-items:center;gap:14px;flex-wrap:wrap;color:#71858a;font-size:10px;font-weight:700}
+.finance-legend span{display:flex;align-items:center;gap:6px}
+.finance-dot{width:9px;height:9px;border-radius:3px;display:inline-block}
+.income-dot{background:#0e9388}.expense-dot{background:#e16a65}
+.finance-chart-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:18px 0 10px}
+.finance-chart-summary>div{display:flex;flex-direction:column;gap:5px;padding:12px;background:#f7faf9;border:1px solid #edf2f1;border-radius:9px;min-width:0}
+.finance-chart-summary small{font-size:10px;color:#819197}
+.finance-chart-summary b{font-size:clamp(12px,2vw,17px);color:#344d53;overflow-wrap:anywhere}
+.finance-chart-summary .finance-positive{color:#08745f}.finance-chart-summary .finance-negative{color:#b33e3a}
+.finance-bars{height:190px;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:12px;align-items:stretch;padding:12px 8px 0;border-bottom:1px solid #e8eeee;background:repeating-linear-gradient(to top,transparent 0,transparent 46px,#eef2f2 47px,#eef2f2 48px)}
+.finance-day{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:8px;min-width:0}
+.finance-bar-pair{height:100%;width:100%;display:flex;align-items:flex-end;justify-content:center;gap:5px;min-height:0}
+.finance-bar{width:min(28px,38%);min-height:0;border-radius:5px 5px 0 0;transition:height .45s ease}
+.income-bar{background:linear-gradient(180deg,#20b9a5,#087d72)}
+.expense-bar{background:linear-gradient(180deg,#f18b83,#d6534c)}
+.finance-day>small{font-size:9px;color:#7e9095;white-space:nowrap}
+.finance-chart-foot{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:13px;color:#8a999d;font-size:9px}
+.finance-chart-foot b{color:#526a70}
+@media(max-width:600px){.finance-chart-summary{gap:6px}.finance-chart-summary>div{padding:9px 7px}.finance-bars{height:155px;gap:5px;padding-left:2px;padding-right:2px}.finance-bar-pair{gap:3px}.finance-day>small{font-size:8px}.finance-legend{font-size:9px}.finance-chart-foot{font-size:8px}}
+@media(prefers-reduced-motion:reduce){.finance-bar{transition:none}}
