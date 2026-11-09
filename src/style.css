@@ -64,3 +64,44 @@
   .court-picker .court-duration-control{grid-template-columns:1fr;gap:4px!important}
   .court-picker .court-duration-control select{width:100%}
 }
+
+
+/* Fix booking modal layout: fieldset must span both form columns. */
+.form-grid > .full,
+.form-grid > fieldset.court-picker {
+  grid-column: 1 / -1 !important;
+}
+.form-grid > fieldset.court-picker {
+  display: block !important;
+  box-sizing: border-box;
+  width: 100% !important;
+}
+.form-grid > fieldset.court-picker .court-checks {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+  width: 100%;
+}
+.form-grid > fieldset.court-picker .court-option {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) 165px !important;
+  align-items: center;
+  width: 100%;
+}
+.form-grid > fieldset.court-picker .court-option-name {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+}
+.form-grid > fieldset.court-picker .court-duration-control {
+  display: grid !important;
+  grid-template-columns: 48px minmax(0, 1fr) !important;
+  align-items: center !important;
+}
+@media (max-width: 520px) {
+  .form-grid > fieldset.court-picker .court-option {
+    grid-template-columns: minmax(0, 1fr) 112px !important;
+  }
+  .form-grid > fieldset.court-picker .court-duration-control {
+    grid-template-columns: 1fr !important;
+  }
+}
