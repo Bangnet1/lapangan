@@ -14,3 +14,53 @@
 .court-checks .court-duration-control{display:grid!important;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:8px!important;background:transparent;padding:0;border-radius:0;color:#60747a;font-size:10px}
 .court-duration-control select{width:100%;padding:8px!important}
 @media(max-width:520px){.court-option{grid-template-columns:minmax(0,1fr) 125px;gap:8px;padding:8px}.court-checks .court-duration-control{grid-template-columns:1fr;gap:4px!important}}
+
+/* Align the court picker fieldset with the full-width form inputs. */
+.form-grid>.court-picker{
+  display:block;
+  width:100%;
+  min-width:0;
+  margin:0;
+  padding:12px;
+  border:1px solid #dfe8e9;
+  border-radius:7px;
+  background:#fff;
+}
+.form-grid>.court-picker>legend{
+  padding:0 6px;
+  margin-left:2px;
+  color:#60747a;
+  font-size:10px;
+  font-weight:600;
+}
+.court-picker .court-checks{width:100%;gap:8px}
+.court-picker .court-option{
+  width:100%;
+  min-width:0;
+  min-height:48px;
+  grid-template-columns:minmax(0,1fr) 165px;
+  padding:7px 10px;
+  border:1px solid #e7eeee;
+  border-radius:7px;
+  background:#f8faf9;
+}
+.court-picker .court-option-name{min-width:0;line-height:1.4}
+.court-picker .court-option-name input{flex:0 0 auto;margin:0}
+.court-picker .court-duration-control{
+  grid-template-columns:48px minmax(0,1fr);
+  min-width:0;
+}
+.court-picker .court-duration-control select{
+  height:36px;
+  padding:7px 9px!important;
+  border:1px solid #dfe8e9;
+  border-radius:7px;
+  background:#fff;
+  font:11px 'DM Sans';
+}
+@media(max-width:520px){
+  .form-grid>.court-picker{padding:10px}
+  .court-picker .court-option{grid-template-columns:minmax(0,1fr) 118px;gap:8px;padding:7px 8px}
+  .court-picker .court-duration-control{grid-template-columns:1fr;gap:4px!important}
+  .court-picker .court-duration-control select{width:100%}
+}
