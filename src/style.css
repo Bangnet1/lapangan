@@ -6,3 +6,11 @@
 .court-list-trigger{position:relative;width:100%;text-align:left;cursor:pointer;border:0;background:transparent;color:inherit;font:inherit;padding:12px 10px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:4px}.court-list-trigger:hover,.court-list-trigger:focus-visible{background:#f0f8f7;outline:2px solid #d7eeea;border-radius:8px}.court-list-trigger .court-edit-hint{position:absolute;right:8px;top:50%;transform:translateY(-50%)}.schedule-add-court{max-width:260px;margin:16px 0 0 0}
 
 .per-court-duration{display:grid;grid-template-columns:1fr;gap:9px}.per-court-duration>.field-label{font-size:10px;color:#60747a;font-weight:700}.per-court-duration>label{display:grid!important;grid-template-columns:1fr 130px;align-items:center;background:#f7faf9;border:1px solid #e7eeee;border-radius:8px;padding:8px 10px}.per-court-duration select{width:100%}@media(max-width:520px){.per-court-duration>label{grid-template-columns:1fr 105px}}
+
+/* Booking form: keep each court's own duration beside its selection. */
+.court-checks{display:grid;grid-template-columns:1fr;gap:8px}
+.court-option{display:grid;grid-template-columns:minmax(0,1fr) 150px;align-items:center;gap:12px;padding:8px 10px;background:#f7faf9;border:1px solid #e7eeee;border-radius:8px}
+.court-checks .court-option-name{display:flex!important;flex-direction:row!important;align-items:center;gap:8px!important;background:transparent;padding:4px 0;border-radius:0;color:#41565d;font-size:11px}
+.court-checks .court-duration-control{display:grid!important;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:8px!important;background:transparent;padding:0;border-radius:0;color:#60747a;font-size:10px}
+.court-duration-control select{width:100%;padding:8px!important}
+@media(max-width:520px){.court-option{grid-template-columns:minmax(0,1fr) 125px;gap:8px;padding:8px}.court-checks .court-duration-control{grid-template-columns:1fr;gap:4px!important}}
