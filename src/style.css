@@ -158,3 +158,36 @@
 @media(max-width:700px){
   .slot .slot-status{font-size:6px;padding:2px 3px}
 }
+
+
+/* Higher-contrast payment status notifications and badges. */
+.slot .slot-status{
+  padding:3px 6px;
+  border:1px solid currentColor;
+  font-size:8px;
+  font-weight:900;
+  letter-spacing:.1px;
+  box-shadow:0 1px 2px #173d4520;
+  background:#fff!important;
+}
+.slot .slot-status.slot-paid,
+.status.s-paid{
+  color:#075f46!important;
+  background:#b8f0d8!important;
+  border-color:#16845f!important;
+}
+.slot .slot-status.slot-dp,
+.status.s-dp{
+  color:#704600!important;
+  background:#ffe09a!important;
+  border-color:#c58a19!important;
+}
+.slot .slot-status.slot-unpaid,
+.status.s-unpaid{
+  color:#8b1717!important;
+  background:#ffc5c1!important;
+  border-color:#d34d48!important;
+}
+@media(max-width:700px){
+  .slot .slot-status{font-size:7px;padding:2px 4px}
+}
