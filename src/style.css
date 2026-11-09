@@ -105,3 +105,25 @@
     grid-template-columns: 1fr !important;
   }
 }
+
+
+/* Animated donut progress indicators inside dashboard statistic cards. */
+.stat-content{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:9px;min-width:0}
+.stat-content>div:first-child{min-width:0;flex:1}
+.stat-content>div:first-child strong{margin:4px 0 5px;overflow-wrap:anywhere}
+.stat-content>div:first-child>small{display:block;line-height:1.45}
+.stat-donut{
+  --donut-progress:0%;
+  width:66px;height:66px;flex:0 0 66px;border-radius:50%;
+  display:grid;place-items:center;position:relative;
+  background:conic-gradient(#0e9388 var(--donut-progress),#e8eff0 var(--donut-progress));
+  transform:rotate(-90deg);
+  animation:donut-open 1.1s cubic-bezier(.2,.75,.25,1) both;
+}
+.stat-donut::before{content:"";position:absolute;inset:7px;border-radius:50%;background:#fff}
+.stat-donut>span{position:relative;z-index:1;transform:rotate(90deg);font-size:15px;font-weight:800;color:#176e66;font-variant-numeric:tabular-nums}
+.stat-donut>span>small{font-size:9px;margin-left:1px;color:#66827e}
+@keyframes donut-open{from{background:conic-gradient(#0e9388 0%,#e8eff0 0%);transform:rotate(-90deg) scale(.78)}to{transform:rotate(-90deg) scale(1)}}
+@media(max-width:1050px){.stat-donut{width:60px;height:60px;flex-basis:60px}}
+@media(max-width:520px){.stat{min-width:0;padding:11px}.stat-content{gap:6px}.stat-donut{width:48px;height:48px;flex-basis:48px}.stat-donut::before{inset:5px}.stat-donut>span{font-size:12px}.stat-content>div:first-child strong{font-size:15px}}
+@media(prefers-reduced-motion:reduce){.stat-donut{animation:none}}
