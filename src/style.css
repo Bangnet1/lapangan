@@ -215,3 +215,8 @@
 .finance-chart-foot b{color:#526a70}
 @media(max-width:600px){.finance-chart-summary{gap:6px}.finance-chart-summary>div{padding:9px 7px}.finance-bars{height:155px;gap:5px;padding-left:2px;padding-right:2px}.finance-bar-pair{gap:3px}.finance-day>small{font-size:8px}.finance-legend{font-size:9px}.finance-chart-foot{font-size:8px}}
 @media(prefers-reduced-motion:reduce){.finance-bar{transition:none}}
+
+
+/* Closed court hours are visible but cannot be booked. */
+.slot.slot-closed{background:#eef1f2;border:1px dashed #d5dddf;color:#aab5b8;cursor:not-allowed;opacity:.65}
+.slot:disabled{pointer-events:none}
