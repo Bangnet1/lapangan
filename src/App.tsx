@@ -4,16 +4,16 @@ import { isSupabaseConfigured, supabase } from './lib/supabase';
 type Booking={id:number;dbId?:string;groupId?:number|string;date:string;court:number;customer:string;phone:string;start:number;end:number;status:'Lunas'|'DP'|'Belum Bayar';paid:number;total:number};
 const rupiah=(n:number)=>new Intl.NumberFormat('id-ID',{style:'currency',currency:'IDR',maximumFractionDigits:0}).format(n);
 const bookingPalette=[
- {backgroundColor:'#dbeafe',borderColor:'#60a5fa',color:'#1e40af'},
- {backgroundColor:'#fce7f3',borderColor:'#f472b6',color:'#9d174d'},
- {backgroundColor:'#dcfce7',borderColor:'#4ade80',color:'#166534'},
- {backgroundColor:'#fef3c7',borderColor:'#fbbf24',color:'#92400e'},
- {backgroundColor:'#ede9fe',borderColor:'#a78bfa',color:'#5b21b6'},
- {backgroundColor:'#cffafe',borderColor:'#22d3ee',color:'#155e75'},
- {backgroundColor:'#ffedd5',borderColor:'#fb923c',color:'#9a3412'},
- {backgroundColor:'#f3e8ff',borderColor:'#c084fc',color:'#6b21a8'},
- {backgroundColor:'#e2e8f0',borderColor:'#94a3b8',color:'#334155'},
- {backgroundColor:'#ffe4e6',borderColor:'#fb7185',color:'#9f1239'}
+ {backgroundColor:'#dbeafe',border:'1px solid #60a5fa',color:'#1e40af'},
+ {backgroundColor:'#fce7f3',border:'1px solid #f472b6',color:'#9d174d'},
+ {backgroundColor:'#dcfce7',border:'1px solid #4ade80',color:'#166534'},
+ {backgroundColor:'#fef3c7',border:'1px solid #fbbf24',color:'#92400e'},
+ {backgroundColor:'#ede9fe',border:'1px solid #a78bfa',color:'#5b21b6'},
+ {backgroundColor:'#cffafe',border:'1px solid #22d3ee',color:'#155e75'},
+ {backgroundColor:'#ffedd5',border:'1px solid #fb923c',color:'#9a3412'},
+ {backgroundColor:'#f3e8ff',border:'1px solid #c084fc',color:'#6b21a8'},
+ {backgroundColor:'#e2e8f0',border:'1px solid #94a3b8',color:'#334155'},
+ {backgroundColor:'#ffe4e6',border:'1px solid #fb7185',color:'#9f1239'}
 ];
 const bookingColor=(booking:Booking)=>{
  const key=String(booking.groupId??booking.id);
